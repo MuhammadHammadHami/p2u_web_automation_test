@@ -1,0 +1,11 @@
+{
+  "validUser": {
+    "username": "hammad",
+    "password": "791857"
+  },
+  "invalidUser": {
+    "username": "hammad",
+    "password": "79185"
+  },
+  "loginUrl": "https://dev.p2u.kr/bbs/login.php?redirect_url=http%3A%2F%2Fdev.p2u.kr%2F"
+}
