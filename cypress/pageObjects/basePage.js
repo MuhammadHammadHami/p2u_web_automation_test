@@ -2,32 +2,32 @@ import URLsData from "./../fixtures/URLsData.json"
 class BasePage {
 
 
-  setUpHooks(){
+  setUpHooks() {
     // Hook to run before all tests
-before(() => {
-  cy.log('Test Suite Starting...')
-})
+    before(() => {
+      cy.log('Test Suite Starting...')
+    })
 
-// Hook to run before each test
-beforeEach(() => {
-  cy.clearCookies()
-  cy.clearLocalStorage()
-  cy.log('Test Starting...')
-  cy.visit(URLsData.visitUrl)
-})
+    // Hook to run before each test
+    beforeEach(() => {
+      cy.clearCookies()
+      cy.clearLocalStorage()
+      cy.log('Test Starting...')
+      cy.visit(URLsData.visitUrl)
+    })
 
-// Hook to run after each test
-afterEach(() => {
-  // if (Cypress.currentTest.state === 'failed') {
-  //   cy.screenshot(); // Take a screenshot if a test fails
-  // }
-  cy.log('Test Finished...')
-})
+    // Hook to run after each test
+    afterEach(() => {
+      // if (Cypress.currentTest.state === 'failed') {
+      //   cy.screenshot(); // Take a screenshot if a test fails
+      // }
+      cy.log('Test Finished...')
+    })
 
-// Hook to run after all tests
-after(() => {
-  cy.log('Test Suite Finished...')
-})
+    // Hook to run after all tests
+    after(() => {
+      cy.log('Test Suite Finished...')
+    })
 
   }
 
