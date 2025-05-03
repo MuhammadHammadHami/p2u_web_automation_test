@@ -6,7 +6,6 @@ class HomePage extends BasePage {
         this.getLoggedInUsername = () => cy.get('span[id="user_name"]')
     }
 
-
     verifyLoggedInUsername() {
         this.getLoggedInUsername().should('be.visible')
     }
@@ -24,7 +23,6 @@ class HomePage extends BasePage {
     }
 
     clickOnLoglogoutBtn() {
-        // this.getGetLogoutBtn().click()
         cy.contains('a', '로그아웃').click()
     }
 }

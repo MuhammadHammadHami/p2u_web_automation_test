@@ -1,5 +1,4 @@
-{
-    "registerUrl": "https://dev.p2u.kr/bbs/register.php",
+{ 
     "name" : "Hammad",
     "password" : "Mobile@1",
     "confirmPassword" : "Mobile@1",
@@ -9,5 +8,4 @@
     "phoneNumber" : "0123123123123",
     "zip" : "12345",
     "address": "Berliner Strasse 1"
-
 }

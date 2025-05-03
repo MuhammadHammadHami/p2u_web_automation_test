@@ -4,13 +4,15 @@ import ProductListPage from '../pageObjects/productListPage';
 import ProductDetailPage from '../pageObjects/productDetailPage';
 import OrderNowPage from '../pageObjects/orderNowPage';
 import loginData from "../fixtures/loginData.json"
-import URLsData from "../fixtures/URLsData.json"
 import orderFormData from "../fixtures/orderFormPage.json"
+import BasePage from "../pageObjects/basePage"
+import urlData from "../fixtures/urlData.json"
+
+const basePage = new BasePage()
 
 describe('Purchase Test', () => {
-
-  beforeEach(() => {
-    cy.visit(URLsData.visitUrl)
+  basePage.setUpHooks()
+  it('Buy Product', () => {
     HomePage.verifyLoginBtnIsVisible()
     HomePage.clickOnLoginBtn()
     LoginPage.verifyUsernameFieldIsVisible()
@@ -19,11 +21,6 @@ describe('Purchase Test', () => {
     LoginPage.inputPassword(loginData.validUser.password)
     LoginPage.verifyLoginBtndIsVisible()
     LoginPage.clickOnLoginBtn()
-    HomePage.verifyLoggedInUsername()
-
-  })
-
-  it('Buy Product', () => {
     HomePage.verifyLoggedInUsername()
     HomePage.goToProductList()
     ProductListPage.verifyProductListPageHeading()
@@ -35,11 +32,7 @@ describe('Purchase Test', () => {
     OrderNowPage.selectRefundAcc(orderFormData.bankAccount)
     OrderNowPage.inputBankAccNumber(orderFormData.bankNumber)
     OrderNowPage.clickOnOrderNow()
-  })
-
-  afterEach(() => {
     HomePage.clickOnLoglogoutBtn()
-    LoginPage.visitLoginPage(loginData.loginUrl)
-
+    LoginPage.visitLoginPage(urlData.loginUrl)
   })
 })

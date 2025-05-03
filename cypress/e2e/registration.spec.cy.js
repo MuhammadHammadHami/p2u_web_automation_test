@@ -1,13 +1,11 @@
 import RegistrationPage from "../pageObjects/registrationPage";
-import LoginPage from "../pageObjects/loginPage";
 import registrationData from "../fixtures/registrationData.json"
-import loginData from "../fixtures/loginData.json"
-import URLsData from "../fixtures/URLsData.json"
+import BasePage from "../pageObjects/basePage"
+
+const basePage = new BasePage()
 
 describe('Registration Test', () => {
-  beforeEach(() => {
-    cy.visit(URLsData.visitUrl)
-  })
+  basePage.setUpHooks()
 
   it('Should Register successfully! ', () => {
     // Unfortunately there are some issues with number field and due to that I was unable to register froom the Web, but I made this test case pass by handling the error
@@ -24,9 +22,5 @@ describe('Registration Test', () => {
     RegistrationPage.inputZip(registrationData.zip)
     RegistrationPage.inputAdddress(registrationData.address)
     RegistrationPage.clickOnJoinMembershipBtn()
-  })
-
-  afterEach(() => {
-    LoginPage.visitLoginPage(loginData.loginUrl)
   })
 })

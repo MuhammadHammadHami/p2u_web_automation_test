@@ -43,7 +43,6 @@ class OrderNowPage {
         cy.contains('h3', '모바일 지갑으로 QR 코드 전달').should('be.visible')
         this.successModalCloseBtn().click()
     }
-
 }
 export default new OrderNowPage()
 

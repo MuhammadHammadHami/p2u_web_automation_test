@@ -1,20 +1,20 @@
 const { defineConfig } = require("cypress");
+const urlData = require("./cypress/fixtures/urlData.json")
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: 'https://dev.p2u.kr/',  // Define base URL for p2u
-    defaultCommandTimeout: 10000, // 10 seconds
+    baseUrl: urlData.baseUrl,
+    defaultCommandTimeout: 10000,
     pageLoadTimeout: 60000,
-    
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-    },
-
-    supportFile: 'cypress/support/index.js',  // Path to support file
-    specPattern: 'cypress/e2e/**/*.spec.cy.js',  // Pattern for test files
-    supportFile: 'cypress/support/e2e.js', 
-
+    supportFile: 'cypress/support/index.js',  
+    specPattern: 'cypress/e2e/**/*.spec.cy.js', 
+    supportFile: 'cypress/support/e2e.js',
+    reporter: 'mochawesome',
+    reporterOptions: {
+      reportDir: 'cypress/reports/mocha',
+      overwrite: true,
+      html: true,
+      json: true
+    }
   },
-
-
 })

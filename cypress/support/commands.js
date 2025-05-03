@@ -26,9 +26,9 @@
 Cypress.on('uncaught:exception', () => false)
 
 Cypress.on('fail', (error, runnable) => {
-    // Take a screenshot when a test fails
-    cy.screenshot(`failure-${runnable.title}`);
-    
-    // Rethrow the error to ensure Cypress knows the test failed
-    throw error
-  })
+  // Take a screenshot when a test fails
+  cy.screenshot(`failure-${runnable.title}`);
+
+  // Rethrow the error to ensure Cypress knows the test failed
+  throw error
+})

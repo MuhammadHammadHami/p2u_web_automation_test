@@ -71,16 +71,7 @@ class RegistrationPage {
         cy.contains('button', '회원가입').should('exist').click()
         cy.contains('button', '확인').should('be.visible')
         cy.contains('button', '확인').should('exist').click()
-
     }
-
-
-
-
-
-
-
-
 
     clickOnProduct() {
         cy.contains('a', '[글로벌G] 알지쓰리 블랙라벨 (60ml x 10포 x 3박스) ').should('be.visible').click()
