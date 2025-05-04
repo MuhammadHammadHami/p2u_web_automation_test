@@ -44,14 +44,26 @@ class RegistrationPage {
 
     inputUsername(username) {
         this.getUsernameField().type(username)
+        cy.contains('button','중복체크').should('be.visible')
+        cy.contains('button','중복체크').click()
+        cy.contains('button','확인').should('exist')
+        cy.contains('button','확인').click()
     }
 
     inputNickname(nickname) {
         this.getNickNameField().type(nickname)
+        cy.contains('button','중복체크').should('be.visible')
+        cy.contains('button','중복체크').click()
+        cy.contains('button','확인').should('exist')
+        cy.contains('button','확인').click()
     }
 
     inputEmail(email) {
         this.getEmailField().type(email)
+        cy.contains('button','중복체크').should('be.visible')
+        cy.contains('button','중복체크').click()
+        cy.contains('button','확인').should('exist')
+        cy.contains('button','확인').click()
     }
 
     inputPhoneNumber(phoneNumber) {

@@ -8,7 +8,6 @@ describe('Registration Test', () => {
   basePage.setUpHooks()
 
   it('Should Register successfully! ', () => {
-    // Unfortunately there are some issues with number field and due to that I was unable to register froom the Web, but I made this test case pass by handling the error
     RegistrationPage.visitRegisterationPage()
     RegistrationPage.acceptTerms()
     RegistrationPage.clickOnAgreeBtn()
