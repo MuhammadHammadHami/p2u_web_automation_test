@@ -1,4 +1,4 @@
-node_modules
-reports
-screenshots
-downloads
+node_modules/
+cypress/reports
+cpress/screenshots
+cypress/downloads
