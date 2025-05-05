@@ -12,6 +12,7 @@
 - **Version Control**: Git
 
 ## Project Structure
+```plaintext
 cypress/
 │
 ├── e2e/ # Cypress spec files (test cases)
@@ -42,7 +43,7 @@ cypress/
 ├── support/ # Custom commands and Cypress setup
 │ ├── commands.js
 │ └── e2e.js
-
+```
 
 ## Installation
 
@@ -58,11 +59,13 @@ Clone the repository:
 ```bash
 git clone https://github.com/MuhammadHammadHami/p2u_Web_Automation_Test.git
 cd p2u_Web_Automation_Test
+```
 
 Install Dependencies 
 
 ```bash
 npm install
+```
 
 ### Running Tests
 
@@ -70,16 +73,18 @@ Open Cypress Test Runner
 
 ```bash
 npx cypress open
+```
 
 Run Tests in Headless Mode
 
 ```bash
 npx cypress run
+```
 
 Run a specific test in Headless Mode
 
 ```bash
 npx cypress run --spec "cypress/e2e/<file-name>.spec.cy.js"
-
+```
 
 
