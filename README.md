@@ -12,16 +12,36 @@
 - **Version Control**: Git
 
 ## Project Structure
-
-p2u_Web_Automation_Test/
-├── cypress/
-│ ├── e2e/(login, register, purchase)
-│ ├── fixtures/ test data files
-│ └── support/  Custom commands
-├── cypress.config.js
-├── package.json 
-├── package-lock.json
-└── .gitignore 
+cypress/
+│
+├── e2e/ # Cypress spec files (test cases)
+│ ├── login.spec.cy.js
+│ ├── purchase.spec.cy.js
+│ └── registration.spec.cy.js
+│
+├── fixtures/ # Test data in JSON format
+│ ├── homePage.json
+│ ├── loginData.json
+│ ├── orderFormPage.json
+│ ├── registrationData.json
+│ └── urlData.json
+│
+├── pageObjects/ # Page Object Model for UI components
+│ ├── basePage.js
+│ ├── homePage.js
+│ ├── loginPage.js
+│ ├── orderNowPage.js
+│ ├── productDetailPage.js
+│ ├── productListPage.js
+│ └── registrationPage.js
+│
+├── reports/ # Folder for storing test reports
+│
+├── screenshots/ # Automatically captured screenshots on failure
+│
+├── support/ # Custom commands and Cypress setup
+│ ├── commands.js
+│ └── e2e.js
 
 
 ## Installation
