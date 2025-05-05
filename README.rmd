@@ -1,4 +1,4 @@
-# p2u-Web-Automation-Test (Cypress)
+p2u Web Automation Test (Cypress)
 
 ## Overview
 
