@@ -1,17 +1,17 @@
-# p2u Web Automation Test (Cypress)
+# P2U Web Automation Test
 
 ## Overview
 
 `p2u-Web-Automation-Test` is a Cypress-based automation framework designed to perform end-to-end testing for the **P2U Wallet** web application. The framework automates common user flows such as login, registration, and product purchase. Built using **Cypress.io**, it enables fast, reliable browser testing with a clean developer experience.
 
-## 🔧 Tech Stack
+## Tech Stack
 
 - **Test Framework**: Cypress
 - **Language**: JavaScript
 - **Package Manager**: npm
 - **Version Control**: Git
 
-## 📁 Project Structure
+## Project Structure
 
 p2u_Web_Automation_Test/
 ├── cypress/
@@ -24,7 +24,7 @@ p2u_Web_Automation_Test/
 └── .gitignore 
 
 
-## 📦 Installation
+## Installation
 
 ### Prerequisites
 
@@ -44,7 +44,6 @@ Install Dependencies
 ```bash
 npm install
 
-
 ### Running Tests
 
 Open Cypress Test Runner
@@ -56,6 +55,11 @@ Run Tests in Headless Mode
 
 ```bash
 npx cypress run
+
+Run a specific test in Headless Mode
+
+```bash
+npx cypress run --spec "cypress/e2e/<file-name>.spec.cy.js"
 
 
 
