@@ -2,27 +2,23 @@ pipeline {
   agent any
 
   tools {
-    nodejs 'Node16' // Set this name under Jenkins > Global Tool Config
-  }
-
-  environment {
-    CYPRESS_BASE_URL = 'https://your-web-app-url.com' // Replace with your actual base URL if needed
+    nodejs 'Node18'
   }
 
   stages {
-    stage('Checkout') {
+    stage('Clone repo') {
       steps {
         git url: 'https://github.com/MuhammadHammadHami/p2u_web_automation_test.git'
       }
     }
 
-    stage('Install Dependencies') {
+    stage('Install dependencies') {
       steps {
         sh 'npm ci'
       }
     }
 
-    stage('Run Cypress Tests') {
+    stage('Run Cypress tests') {
       steps {
         sh 'npx cypress run'
       }
@@ -32,6 +28,7 @@ pipeline {
   post {
     always {
       archiveArtifacts artifacts: 'cypress/videos/**/*.mp4', allowEmptyArchive: true
+      archiveArtifacts artifacts: 'cypress/screenshots/**/*.png', allowEmptyArchive: true
     }
   }
 }
