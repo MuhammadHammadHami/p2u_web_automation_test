@@ -8,7 +8,9 @@ pipeline {
   stages {
     stage('Clone repo') {
       steps {
-        git url: 'https://github.com/MuhammadHammadHami/p2u_web_automation_test.git'
+        git url: 'https://github.com/MuhammadHammadHami/p2u_web_automation_test.git',
+        branch: 'main'
+
       }
     }
 
